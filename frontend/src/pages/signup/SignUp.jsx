@@ -103,8 +103,15 @@ const SignUp = () => {
             Already have an account?
           </Link>
           <div>
-            <button className="btn btn-block btn-sm mt-2 border border-slate-700 bg-[#142b3a] hover:bg-[#2c4d6a] text-[#aab6c4]">
-              SignUp
+            <button
+              className="btn btn-block btn-sm mt-2 border border-slate-700 bg-[#142b3a] hover:bg-[#2c4d6a] text-[#aab6c4]"
+              disabled={loading}
+            >
+              {loading ? (
+                <span className="loading loading-spinner"></span>
+              ) : (
+                "Sign Up"
+              )}
             </button>
           </div>
         </form>
